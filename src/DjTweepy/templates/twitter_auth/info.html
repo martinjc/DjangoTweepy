@@ -1,0 +1,10 @@
+{% extends "twitter_auth/base.html" %}
+
+	{% block content %}
+		<div id="container">
+			<img src="{{user.profile_image_url}}" />
+			<h3>{{user.name}}</h3>
+			<p>{{user.screen_name}}<p/>
+			<a href="/logout/" title="logout">logout</a>
+		</div>
+	{% endblock %}

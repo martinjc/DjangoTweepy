@@ -1,16 +1,9 @@
 from django.conf.urls.defaults import *
-
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.conf import settings
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^DjTweepy/', include('DjTweepy.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # (r'^admin/', include(admin.site.urls)),
+	# serve any media files (including css and javascript) while in development
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT }),
+    # redirect all urls to the twitter_auth app
+    (r'^', include('twitter_auth.urls')),
 )
