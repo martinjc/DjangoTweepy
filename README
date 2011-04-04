@@ -1,4 +1,5 @@
-This project contains a basic implementation of a Django project (DjTweepy) with one app 'twitter_auth'. The 'twitter_auth' app uses Tweepy and OAuth to authenticate with twitter, so can be extended to create twitter web apps.
+This project contains a basic implementation of a Django project (DjTweepy) with one app 'twitter_auth'. 
+The 'twitter_auth' app uses Tweepy and OAuth to authenticate with twitter, so can be extended to create twitter web apps.
 
 To use:
 
