@@ -42,7 +42,8 @@ def auth(request):
 	# start the OAuth process, set up a handler with our details
     oauth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
     # direct the user to the authentication url
-    auth_url = oauth.get_authorization_url()
+    # if user is logged-in and authorized then transparently goto the callback URL
+    auth_url = oauth.get_authorization_url(True)
     response = HttpResponseRedirect(auth_url)
     # store the request token
     request.session['unauthed_token_tw'] = (oauth.request_token.key, oauth.request_token.secret) 
