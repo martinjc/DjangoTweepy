@@ -1,7 +1,7 @@
 import tweepy
 
-CONSUMER_KEY = 'YOUR_CONSUMER_KEY'
-CONSUMER_SECRET = 'YOUR_CONSUMER_SECRET'
+CONSUMER_KEY = '6EbXLDnvPHRqDFXh4OagGA'
+CONSUMER_SECRET = '9WUpSToZroXeJtp2x78FxsZ0UH5mjKDvEEYdYMfWfM'
 
 def get_api(request):
 	# set up and return a twitter api object
